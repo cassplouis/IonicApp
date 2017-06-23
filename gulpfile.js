@@ -13,6 +13,8 @@ var paths = {
 
 gulp.task('default', ['sass']);
 
+gulp.task('serve:before', ['default']);
+
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
     .pipe(sass())

@@ -25,6 +25,14 @@ angular.module('starter.services', [])
     all: function() {
       return tasks;
     },
+    create: function(newTask){
+      tasks.push({
+        id: tasks.length,
+        name: newTask.taskName, 
+        description: newTask.taskDesc
+      });
+      return true;
+    },
     remove: function(task) {
       tasks.splice(tasks.indexOf(task), 1);
     },
